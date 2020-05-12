@@ -326,6 +326,38 @@ ul {
 /* =============
     Typography
 ============= */
+body {
+  font-family: 'Open Sans', sans-serif; }
+  body h1 {
+    font-weight: 600;
+    font-size: 2.3125rem;
+    text-align: right; }
+    @media (min-width: 768px) {
+      body h1 {
+        font-size: 3.5rem; } }
+    @media (min-width: 992px) {
+      body h1 {
+        font-size: 4.875rem; } }
+  body h2, body h3 {
+    font-weight: 600;
+    font-size: 1.5625rem;
+    text-align: center; }
+    @media (min-width: 768px) {
+      body h2, body h3 {
+        font-size: 2.1875rem;
+        text-align: left; } }
+    @media (min-width: 992px) {
+      body h2, body h3 {
+        font-size: 35px;
+        text-align: left; } }
+  body p {
+    font-weight: 300;
+    font-size: 1.125rem;
+    text-align: center; }
+  body h1, body h2, body h3, body h4, body h5, body h6, body p {
+    margin: 0;
+    padding: 0; }
+
 /* =============
     Buttons
 ============= */
@@ -353,68 +385,133 @@ textarea {
 /* =============
     Footer
 ============= */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFA500; }
+  footer #footer-content ul {
+    display: flex; }
+    footer #footer-content ul h4 {
+      color: #fff;
+      font-size: 0.8125rem; }
+
 /* =============
     Section-1
 ============= */
-#section-1 img {
-  width: 100%; }
+#section-1 {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  background-image: url("../img/section-1/heroimg.jpg");
+  background-size: cover;
+  background-position: center;
+  gap: 20px;
+  height: 377px; }
+  @media (min-width: 768px) {
+    #section-1 {
+      height: 549px; } }
+  @media (min-width: 992px) {
+    #section-1 {
+      height: 724px; } }
+  #section-1 h1 {
+    color: #FFA500;
+    margin: 34px; }
 
 /* =============
     Section-2
 ============= */
-@media (min-width: 1200px) {
-  #section-2 {
-    display: grid;
-    grid-template-columns: auto 1200px auto;
-    grid-template-areas: ". section-2 ."; } }
-
-#section-2 #section-2-content {
-  display: grid;
-  grid-template-areas: "section-2-text" "section-2-img"; }
-  @media (min-width: 768px) {
-    #section-2 #section-2-content {
-      display: grid;
-      grid-template-columns: 45% auto;
-      grid-template-areas: "section-2-img section-2-text"; } }
+#section-2 {
+  margin: 35px 0; }
   @media (min-width: 1200px) {
-    #section-2 #section-2-content {
-      grid-area: section-2; } }
-  #section-2 #section-2-content aside {
-    grid-area: section-2-img; }
-    #section-2 #section-2-content aside img {
-      width: 100%; }
-  #section-2 #section-2-content #section-2-right {
+    #section-2 {
+      margin: 52px 0;
+      display: grid;
+      grid-template-columns: auto 1200px auto;
+      grid-template-areas: ". section-2 ."; } }
+  #section-2 #section-2-content {
     display: grid;
-    grid-template-columns: 15px auto 15px;
-    grid-template-areas: ". section-2-content .";
-    grid-area: section-2-text; }
-    #section-2 #section-2-content #section-2-right #section-2-right-content {
-      grid-area: section-2-content; }
+    grid-template-areas: "section-2-text" "section-2-img"; }
+    @media (min-width: 768px) {
+      #section-2 #section-2-content {
+        margin: 60px 0;
+        display: grid;
+        grid-template-columns: 40% auto;
+        grid-template-areas: "section-2-img section-2-text"; } }
+    @media (min-width: 1200px) {
+      #section-2 #section-2-content {
+        grid-area: section-2; } }
+    #section-2 #section-2-content aside {
+      grid-area: section-2-img;
+      background-image: url("../img/section-2/hero2img.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 75vh; }
+      @media (min-width: 768px) {
+        #section-2 #section-2-content aside {
+          height: 50vh; } }
+      @media (min-width: 992px) {
+        #section-2 #section-2-content aside {
+          height: 735px; } }
+      @media (min-width: 1200px) {
+        #section-2 #section-2-content aside {
+          height: 85vh; } }
+    #section-2 #section-2-content #section-2-right {
+      display: grid;
+      grid-template-columns: 15px auto 15px;
+      grid-template-areas: ". section-2-content .";
+      grid-area: section-2-text;
+      margin-bottom: 20px; }
+      #section-2 #section-2-content #section-2-right #section-2-right-content {
+        grid-area: section-2-content;
+        gap: 20px; }
+        #section-2 #section-2-content #section-2-right #section-2-right-content h1 {
+          margin: 16px 0 10px;
+          color: #FFA500; }
+        #section-2 #section-2-content #section-2-right #section-2-right-content p {
+          margin-bottom: 16px;
+          color: #000; }
 
 /* =============
     Section-3
 ============= */
-#section-3 img {
-  width: 100%; }
-
+/* =============
+    Section-3
+============= */
+#section-3 {
+  background-image: url("../img/section-3/hero3img.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 45vh; }
+  @media (min-width: 768px) {
+    #section-3 {
+      height: 50vh; } }
+  @media (min-width: 992px) {
+    #section-3 {
+      height: 650px; } }
 /* =============
     Section-4
 ============= */
 #section-4 {
   display: grid;
   grid-template-columns: 15px auto 15px;
-  grid-template-areas: ". section-4 ."; }
+  grid-template-areas: ". section-4 .";
+  margin: 35px 0; }
   @media (min-width: 768px) {
     #section-4 {
-      grid-template-columns: auto 60% auto; } }
+      grid-template-columns: auto 60% auto;
+      margin: 48px 0; } }
   @media (min-width: 992px) {
     #section-4 {
+      margin: 52px 0;
       grid-template-columns: auto 50% auto; } }
   @media (min-width: 1200px) {
     #section-4 {
       grid-template-columns: auto 800px auto; } }
   #section-4 #section-4-content {
     grid-area: section-4; }
+  #section-4 h1 {
+    color: #FFA500; }
 
 /* =============
     Section-5
@@ -454,13 +551,19 @@ textarea {
 #section-6 {
   display: grid;
   grid-template-columns: 15px auto 15px;
-  grid-template-areas: ". section-6 ."; }
+  grid-template-areas: ". section-6 .";
+  margin: 35px 0; }
+  #section-6 p {
+    margin: 35px 0;
+    color: black; }
   @media (min-width: 1200px) {
     #section-6 {
-      grid-template-columns: auto 1200px auto; } }
+      grid-template-columns: auto 1200px auto;
+      margin: 52px 0; } }
   #section-6 #section-6-content {
     grid-area: section-6; }
     @media (min-width: 992px) {
       #section-6 #section-6-content {
         display: grid;
-        grid-template-columns: 30% auto; } }
+        grid-template-columns: 30% auto;
+        margin: 48px 0; } }

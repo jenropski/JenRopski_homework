@@ -3,14 +3,17 @@
 ============= */
 #section-4{
     display: grid;
-        grid-template-columns: 15px auto 15px;
-        grid-template-areas: ". section-4 .";
+    grid-template-columns: 15px auto 15px;
+    grid-template-areas: ". section-4 .";
+    margin: 35px 0;
 
         @include md{
             grid-template-columns: auto 60% auto;
+            margin: 48px 0;
         }
 
         @include lg{
+            margin: 52px 0;
             grid-template-columns: auto 50% auto;
         }
 
@@ -21,4 +24,9 @@
         #section-4-content{
             grid-area: section-4;
         }
-}
+
+        h1{
+            color: $orange;
+        }
+
+    }

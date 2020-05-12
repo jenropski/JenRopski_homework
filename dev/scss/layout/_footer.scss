@@ -2,5 +2,30 @@
     Footer
 ============= */
 footer{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+
+    background-color: $orange;
     
+      
+    #footer-content {
+
+
+        ul{
+            display: flex;
+
+            h4{
+                color: $white;
+                font-size: rem-calc(13);
+            
+            }
+
+        }
+
+               
+        }
+      
+        
 }
+       

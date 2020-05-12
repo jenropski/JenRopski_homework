@@ -2,7 +2,30 @@
     Section-1
 ============= */
 #section-1{
-    img{
-        width: 100%;
-    }
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    
+
+
+    background-image: url('../img/section-1/heroimg.jpg');
+    background-size: cover;
+    background-position: center;
+    gap: 20px;
+    height: 377px;
+
+        @include md{
+            height: 549px;
+            }
+
+        @include lg{
+            height: 724px;
+            }
+
+        
+        h1{
+            color: $orange;
+            margin: 34px;
+        }
+
 }

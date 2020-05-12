@@ -5,16 +5,22 @@
     display: grid;
         grid-template-columns: 15px auto 15px;
         grid-template-areas: ". section-6 .";
-
+            margin: 35px 0;
+            p{
+                margin: 35px 0;
+                color: black;
+            }
         @include xl{
             grid-template-columns: auto 1200px auto;
+                margin: 52px 0;
         }
 
         #section-6-content{
             grid-area: section-6;
             @include lg{
                 display: grid;
-                grid-template-columns: 30% auto;
+                grid-template-columns: 30% auto; 
+                    margin: 48px 0;
             }
         }
 }

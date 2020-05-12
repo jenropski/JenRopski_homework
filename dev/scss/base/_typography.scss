@@ -1,3 +1,39 @@
 /* =============
     Typography
 ============= */
+body{
+    font-family: 'Open Sans', sans-serif;   
+    h1{
+        font-weight: 600;
+        font-size: rem-calc(37);
+        text-align: right;
+        @include md{
+            font-size: rem-calc(56);
+        }
+        @include lg{
+            font-size: rem-calc(78);
+        }
+    } 
+    h2, h3, {
+        font-weight: 600;
+        font-size: rem-calc(25);
+        text-align: center;
+        @include md{
+            font-size: rem-calc(35);
+            text-align: left;
+        }
+        @include lg{
+            font-size: 35px;
+            text-align: left;
+        }
+    }
+    p{
+        font-weight: 300;
+        font-size: rem-calc(18);
+        text-align: center;
+    }
+    h1,h2,h3,h4,h5,h6,p{
+        margin: 0;
+        padding: 0;
+    }
+}
