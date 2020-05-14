@@ -1,3 +1,78 @@
 /* =============
     Header
 ============= */
+header {
+    background-color: $white;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    >div {
+        display: grid;
+        grid-template-areas: "logo burger"
+            "nav nav";
+        grid-template-columns: 0% auto;
+
+        @include lg {
+            grid-template-areas: "logo nav";
+            grid-template-columns: 20% auto;
+        }
+
+        #logo-container {
+            grid-area: logo;
+            padding: 40px;
+
+            @include lg {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+
+            a:link,
+            a:visited {
+                background-color: $orange;
+                color: $black;
+                transition: 0.25s;
+                text-decoration: none;
+                padding: 10px 25px;
+                border-radius: 10px;
+                font-weight: 200;
+            }
+
+            a:hover,
+            a:active {
+                background-color: $black;
+                color: $white;
+            }
+        }
+
+        #burger-container {
+            align-items: center;
+            display: flex;
+            grid-area: burger;
+            justify-content: flex-end;
+            padding: 10px;
+
+            @include lg {
+                display: none !important;
+            }
+
+            i {
+                cursor: pointer;
+            }
+        }
+
+        #nav-container {
+            background-color: $white;
+            display: none;
+            grid-area: nav;
+            padding: 0 10px 0;
+
+            @include lg {
+                background-color: $white;
+                display: block !important;
+            }
+        }
+    }
+}

@@ -379,9 +379,88 @@ textarea {
 /* =============
     Navigation
 ============= */
+#nav-container ul {
+  height: 100%;
+  text-align: right; }
+  @media (min-width: 992px) {
+    #nav-container ul {
+      display: flex;
+      justify-content: flex-end; } }
+  #nav-container ul li {
+    margin-bottom: 20px; }
+    @media (min-width: 992px) {
+      #nav-container ul li {
+        align-items: center;
+        display: flex;
+        margin: 0px 30px 0 0;
+        padding-left: 109px; } }
+    #nav-container ul li a:link,
+    #nav-container ul li a:visited {
+      color: #000;
+      text-decoration: none;
+      transition: 0.25s; }
+    #nav-container ul li a:hover,
+    #nav-container ul li a:active {
+      color: #FFA500; }
+
 /* =============
     Header
 ============= */
+header {
+  background-color: #fff;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  header > div {
+    display: grid;
+    grid-template-areas: "logo burger" "nav nav";
+    grid-template-columns: 0% auto; }
+    @media (min-width: 992px) {
+      header > div {
+        grid-template-areas: "logo nav";
+        grid-template-columns: 20% auto; } }
+    header > div #logo-container {
+      grid-area: logo;
+      padding: 40px; }
+      @media (min-width: 992px) {
+        header > div #logo-container {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end; } }
+      header > div #logo-container a:link,
+      header > div #logo-container a:visited {
+        background-color: #FFA500;
+        color: #000;
+        transition: 0.25s;
+        text-decoration: none;
+        padding: 10px 25px;
+        border-radius: 10px;
+        font-weight: 200; }
+      header > div #logo-container a:hover,
+      header > div #logo-container a:active {
+        background-color: #000;
+        color: #fff; }
+    header > div #burger-container {
+      align-items: center;
+      display: flex;
+      grid-area: burger;
+      justify-content: flex-end;
+      padding: 10px; }
+      @media (min-width: 992px) {
+        header > div #burger-container {
+          display: none !important; } }
+      header > div #burger-container i {
+        cursor: pointer; }
+    header > div #nav-container {
+      background-color: #fff;
+      display: none;
+      grid-area: nav;
+      padding: 0 10px 0; }
+      @media (min-width: 992px) {
+        header > div #nav-container {
+          background-color: #fff;
+          display: block !important; } }
 /* =============
     Footer
 ============= */
@@ -413,7 +492,7 @@ footer {
       height: 549px; } }
   @media (min-width: 992px) {
     #section-1 {
-      height: 724px; } }
+      height: 800px; } }
   #section-1 h1 {
     color: #FFA500;
     margin: 34px; }
